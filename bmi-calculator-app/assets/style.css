@@ -1,8 +1,10 @@
-body {
+.outer {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('../media/background.jpg');
+    background-size:  cover;
+    background-repeat: no-repeat;
     margin: 0;
-    padding: 0;
+    padding: 100px;
     box-sizing: border-box;
 }
 
@@ -14,7 +16,7 @@ h2 {
 form {
     max-width: 400px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #ffffff7c;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
