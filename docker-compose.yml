@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  bmi-calculator-app:
+    image: php:7.4-apache
+    container_name: bmi-calculator
+    ports:
+      - "8081:80"  # Change the host port if needed
+    volumes:
+      - ./bmi-calculator-app:/var/www/html
+
+  bmi-calculator-db:
+    image: mysql:5.7
+    container_name: bmi-calculator-db
+    environment:
+      MYSQL_ROOT_PASSWORD: examplepassword
+      MYSQL_DATABASE: bmi_calculator_db
+      MYSQL_USER: bmi_user
+      MYSQL_PASSWORD: bmi_password
+    ports:
+      - "3307:3306"  # Change the host port if needed
+    volumes:
+      - bmi-calculator-db-data:/var/lib/mysql
+
+volumes:
+  bmi-calculator-db-data:
